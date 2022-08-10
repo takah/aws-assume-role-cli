@@ -40,5 +40,5 @@ account2 arn:aws:iam::123456789012:role/abcdef-role
 account3 arn:aws:iam::987654321098:role/opqrst-role
 ```
 
-# Funding
+## Funding
 This work is partially funded by [Linkbal Inc.](https://linkbal.co.jp/).
