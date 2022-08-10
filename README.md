@@ -5,12 +5,15 @@ it's tedius to switch between roles in AWS CLI.
 
 This script makes it easier to select a role.
 
+## Usage
 ```
 Usage:
 $ assume-role 
+```
 
-===== Choose a role in selector =====
+![select-a-role](https://user-images.githubusercontent.com/193891/183918204-d94de389-09cd-4ee2-aeb0-86f779ffcb78.png)
 
+```
 Old identity
 {
     "UserId": "XXXXXXXXXXXXXXXXXXXXX",
@@ -26,6 +29,7 @@ export AWS_SESSION_TOKEN=xxxxxxxxxxxxx...(snip)...xxxxxxxxxxxxxxx
 echo Current identity
 aws sts get-caller-identity
 ```
+
 
 ## Configuration file: ~/.aws/assume-role.conf
 ```
