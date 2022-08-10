@@ -41,4 +41,4 @@ account3 arn:aws:iam::987654321098:role/opqrst-role
 ```
 
 ## Funding
-This work is partially funded by [Linkbal Inc.](https://linkbal.co.jp/).
+This work is partially funded by [Linkbal Inc.](https://linkbal.co.jp/)
