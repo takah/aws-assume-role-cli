@@ -14,13 +14,7 @@ aws sts get-caller-identity
 
 res=$(aws sts assume-role --role-arn arn:aws:iam::$role --role-session-name temporary)
 
-cat << EOF
-Copy and paste to Run the lines below in your shell
-
-export AWS_ACCESS_KEY_ID=$(echo $res | jq -r .Credentials.AccessKeyId)
-export AWS_SECRET_ACCESS_KEY=$(echo $res | jq -r .Credentials.SecretAccessKey)
-export AWS_SESSION_TOKEN=$(echo $res | jq -r .Credentials.SessionToken)
-
-echo Current identity
-aws sts get-caller-identity
-EOF
+AWS_ACCESS_KEY_ID=$(echo $res | jq -r .Credentials.AccessKeyId) \
+  AWS_SECRET_ACCESS_KEY=$(echo $res | jq -r .Credentials.SecretAccessKey) \
+  AWS_SESSION_TOKEN=$(echo $res | jq -r .Credentials.SessionToken) \
+  exec bash
