@@ -1,4 +1,4 @@
-# Easy role selector for AWS assume-role
+# AWS switch role
 
 If you have multile roles in multiple AWS accounts,
 it's tedius to switch between roles in AWS CLI.
@@ -12,24 +12,6 @@ $ assume-role
 ```
 
 ![select-a-role](https://user-images.githubusercontent.com/193891/183918204-d94de389-09cd-4ee2-aeb0-86f779ffcb78.png)
-
-```
-Old identity
-{
-    "UserId": "XXXXXXXXXXXXXXXXXXXXX",
-    "Account": "123456789012",
-    "Arn": "arn:aws:iam::234567890123:user/xxxxx@example.com"
-}
-Copy and paste to Run the lines below in your shell
-
-export AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxxx
-export AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-export AWS_SESSION_TOKEN=xxxxxxxxxxxxx...(snip)...xxxxxxxxxxxxxxx
-
-echo Current identity
-aws sts get-caller-identity
-```
-
 
 ## Configuration file: ~/.aws/assume-role.conf
 ```
